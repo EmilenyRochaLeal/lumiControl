@@ -1,12 +1,12 @@
-# Welcome to your Expo app 👋
+# LumiControl
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo mobile em React Native que utiliza o sensor de luz para ajustar o brilho da tela automaticamente ou de forma manual.
 
 ## Get create
 
 ```bash
-   npx create-expo-app@latest my-app
-   cd my-app
+   npx create-expo-app@latest lumiControl
+   cd lumiControl
    code .
    npm i
 ```
@@ -16,7 +16,7 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 1. Install dependencies
 
    ```bash
-    npm install
+    npm install ou npm i
    ```
 
 2. Start the app
