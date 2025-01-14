@@ -36,7 +36,7 @@ Nesse projeto foi utilizado como estratégia de navegação o Expo Router.
    npx expo install expo-sensors
 ```
 ### configuração de permição
-   No arquivo **app.json** adicionar :
+   No arquivo **app.json** adicionar motivo de permição nos plugins do expo:
 ```bash
    {
       "expo": {
@@ -49,6 +49,11 @@ Nesse projeto foi utilizado como estratégia de navegação o Expo Router.
          ]
       ],
       },
+```
+### Como importar 
+
+```bash
+   import { LightSensor } from 'expo-sensors';
 ```
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
