@@ -28,12 +28,27 @@ Aplicativo mobile em React Native que utiliza o sensor de luz para ajustar o bri
 Nesse projeto foi utilizado como estratégia de navegação o Expo Router.
    Foi criado no **app** diretório arquivo de index.tsx, notificacao.tsx, configuracao.tsx e _layout.tsx e depois implementado a importação e uso do expo router.
 
-## Get a fresh project
+## Configuração de expo sensors
 
-When you're ready, run:
+### comando de instalação
 
 ```bash
-npm run reset-project
+   npx expo install expo-sensors
+```
+### configuração de permição
+   No arquivo **app.json** adicionar :
+```bash
+   {
+      "expo": {
+      "plugins": [
+         [
+         "expo-sensors",
+         {
+            "motionPermission": "Permitir que o lumiControl acesse os sensores de luminosidade do seu dispositivo"
+         }
+         ]
+      ],
+      },
 ```
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.

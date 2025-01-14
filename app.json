@@ -32,6 +32,12 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "Permitir que o lumiControl acesse os sensores de luminosidade do seu dispositivo"
+        }
       ]
     ],
     "experiments": {
