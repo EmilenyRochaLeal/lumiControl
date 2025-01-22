@@ -59,9 +59,9 @@ Nesse projeto foi utilizado como estratégia de navegação o Expo Router.
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
 ### Sensor de Luz com React Native
-Exibe na tela se o sensor está disponível pi não no dispositivo.
+Exibe na tela se o sensor está disponível ou não no dispositivo.
 
-## Como Funciona:
+### Como Funciona:
 
 O método isAvailableAsync() verifica se o sensor de luz está disponível.
 No Android, retorna true ou false.

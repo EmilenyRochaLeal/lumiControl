@@ -1,6 +1,6 @@
 import { LightSensor } from 'expo-sensors';
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, Platform } from 'react-native';
+import { StyleSheet, Text, View, Platform, Alert } from 'react-native';
 
 export default function Light() {
     const [isAvailable, setIsAvailable] = useState(false);
@@ -11,6 +11,9 @@ export default function Light() {
             if (Platform.OS === 'android') {
                 const available = await LightSensor.isAvailableAsync();
                 setIsAvailable(available);
+                if (available) {
+                    Alert.alert('Sensor de Luz', 'O sensor de luz está disponível!');
+                }
             } else {
                 setIsAvailable(false); // Sensor não disponível no iOS
             }
