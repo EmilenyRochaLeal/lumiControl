@@ -7,7 +7,7 @@
 //       <Text>Suas configurações</Text>
 //       <Link href={"/notificacao"}>Ir para as notificações</Link>
 //     </View>
-    
+
 //   );
 // }
 
@@ -35,14 +35,14 @@ const AmbienteBrilho = () => {
     return (
         <View style={styles.container}>
             <Header />
-            <BrightnessControl brilho={brilho} setBrilho={setBrilho} />
-            <Configurations
-                notificacoes={notificacoes}
-                setNotificacoes={setNotificacoes}
-                brilhoAutomatico={brilhoAutomatico}
-                setBrilhoAutomatico={setBrilhoAutomatico}
-                salvarConfiguracoes={salvarConfiguracoes}
-            />
+                <BrightnessControl brilho={brilho} setBrilho={setBrilho} />
+                <Configurations
+                    notificacoes={notificacoes}
+                    setNotificacoes={setNotificacoes}
+                    brilhoAutomatico={brilhoAutomatico}
+                    setBrilhoAutomatico={setBrilhoAutomatico}
+                    salvarConfiguracoes={salvarConfiguracoes}
+                />
         </View>
     );
 };
@@ -50,7 +50,10 @@ const AmbienteBrilho = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 20,
+        paddingLeft: 20,
+        paddingBottom: 20,
+        paddingRight: 20,
+        paddingTop: 5,
         backgroundColor: '#fff',
         justifyContent: 'center',
     },
