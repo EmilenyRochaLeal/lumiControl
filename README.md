@@ -58,7 +58,7 @@ Nesse projeto foi utilizado como estratégia de navegação o Expo Router.
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-### Sensor de Luz com React Native
+## Sensor de Luz com React Native
 Exibe na tela se o sensor está disponível ou não no dispositivo.
 
 ### Como Funciona:
@@ -66,6 +66,40 @@ Exibe na tela se o sensor está disponível ou não no dispositivo.
 O método isAvailableAsync() verifica se o sensor de luz está disponível.
 No Android, retorna true ou false.
 No IOS, a funcionalidade está desativada por padrão.
+
+## Tela de Configurações
+
+A tela de configurações permite ao usuário:
+
+1. Habilitar ou desabilitar notificações de luminosidade.
+
+2. Ativar ou desativar o brilho automático.
+
+3. Salvar as preferências selecionadas.
+
+### Componentes da Tela:
+
+1. Notificações de Luminosidade:
+Um _Switch_ que controla se o usuário deseja receber notificções sobre os valores de luminosidade do ambiente.
+
+2. Brilho Automático:
+Outro _Switch_ que permite habilitar ou desabilitar a função de brilho automático.
+
+3. Botão Salvar Configurações:
+Um botão que registra as preferências atuais e as salva. As configurações são exibidas no console para simular o comportamento de persistência.
+
+#### Como funciona:
+
+Os valores dos _Switches_ são armazenados em estados locais utilizando o _useState_.
+
+O botão de salvar dispara um console log com as configurações atuais.
+
+```bash 
+    <Switch
+                value={notificacoes}
+                onValueChange={(value) => setNotificacoes(value)}
+            />
+```
 
 ## Learn more
 
