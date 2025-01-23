@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         paddingBottom: 20,
         paddingRight: 20,
         paddingTop: 5,
-        backgroundColor: '#fff',
+        backgroundColor: '#000',
         justifyContent: 'center',
     },
 });

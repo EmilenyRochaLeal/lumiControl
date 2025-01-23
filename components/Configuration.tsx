@@ -22,6 +22,7 @@ const Configurations: React.FC<ConfigurationsProps> = ({
             <Switch
                 value={notificacoes}
                 onValueChange={(value) => setNotificacoes(value)}
+                // style={styles.switch}
             />
 
             <Text style={styles.configLabel}>Brilho Automático</Text>
@@ -42,12 +43,16 @@ const Configurations: React.FC<ConfigurationsProps> = ({
 const styles = StyleSheet.create({
     configContainer: {
         marginVertical: 20,
+        
     },
     configLabel: {
         fontSize: 16,
         marginBottom: 10,
-        color: '#333',
+        color: '#fff',
     },
+    // switch:{
+    //     backgroundColor: 'red'
+    // }
 });
 
 export default Configurations;
