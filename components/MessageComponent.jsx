@@ -50,23 +50,23 @@ export default function MessageComponent() {
   return (
     <View style={styles.message}>
       <Text style={styles.messageText}>{message}</Text>
-      {illuminance !== null && (
+      {/* {illuminance !== null && (
         <Text style={styles.messageText}>Luz ambiente: {illuminance.toFixed(2)} lx</Text>
-      )}
+      )} */}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   message: {
-    backgroundColor: 'black',
+    backgroundColor: '#000',
     margin: 20,
     padding: 20,
     borderRadius: 10,
   },
   messageText: {
     color: 'white',
-    fontSize: 16,
+    fontSize: 26,
     textAlign: 'center',
     marginBottom: 10,
   },
