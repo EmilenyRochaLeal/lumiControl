@@ -100,7 +100,20 @@ O botão de salvar dispara um console log com as configurações atuais.
                 onValueChange={(value) => setNotificacoes(value)}
             />
 ```
-
+## Uso de Ionicons
+Ao instalar o expo a biblioteca Ionicons já está configurada no projeto pronta para ser importada e usada.
+Pesquisar o icon que deseja usar : [text](https://icons.expo.fyi/Index)
+   1. importar no arquivo que deseja usar, nesse caso no index.ts
+      ```bash
+         import Ionicons from '@expo/vector-icons/Ionicons'; 
+      ```
+   2. foi usando dentro do Link para permitir o usuário apertar no icon e ser direcionado para outra página 
+   ```bash
+      <View style={styles.linkContainer}>
+        <Link href={"/notificacao"} style={styles.link}><Ionicons name="notifications" size={24} color="blue" />{"\n"}Notificações</Link>
+        <Link href={"/configuracao"} style={styles.link}><Ionicons name="settings" size={24} color="blue" />{"\n"}Configurações</Link>
+      </View>
+   ```
 ## Learn more
 
 To learn more about developing your project with Expo, look at the following resources:

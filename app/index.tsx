@@ -1,5 +1,6 @@
 import { Image, StyleSheet, Platform, Text, View} from 'react-native';
 import { Link } from 'expo-router';
+import Ionicons from '@expo/vector-icons/Ionicons'; 
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -14,8 +15,8 @@ export default function HomeScreen() {
       <Text style={styles.title}>Bem vindo(a)</Text>
       <Text style={styles.subTitle}>LuminControl</Text>
       <View style={styles.linkContainer}>
-        <Link href={"/notificacao"} style={styles.link}>Ir para as notificações</Link>
-        <Link href={"/configuracao"} style={styles.link}>Ir para as configurações</Link>
+        <Link href={"/notificacao"} style={styles.link}><Ionicons name="notifications" size={24} color="blue" />{"\n"}Notificações</Link>
+        <Link href={"/configuracao"} style={styles.link}><Ionicons name="settings" size={24} color="blue" />{"\n"}Configurações</Link>
       </View>
       {/* <Light/> */}
     </View>
@@ -49,12 +50,10 @@ const styles = StyleSheet.create({
     bottom: 20, 
   },
   link: {
-    fontSize: 10, 
+    fontSize: 15, 
     fontWeight: 'bold',
-    color: "#fff", 
-    textDecorationLine: "underline", 
+    color: "black",  
     marginVertical: 10, 
-    backgroundColor: "#007BFF",
     textAlign: "center", 
     paddingVertical: 20, 
     paddingHorizontal: 23, 
