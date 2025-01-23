@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Platform, Text, View} from 'react-native';
 import { Link } from 'expo-router';
 import Ionicons from '@expo/vector-icons/Ionicons'; 
+import MessageComponent from '@/components/MessageComponent';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -18,6 +19,9 @@ export default function HomeScreen() {
         <Link href={"/notificacao"} style={styles.link}><Ionicons name="notifications" size={24} color="blue" />{"\n"}Notificações</Link>
         <Link href={"/configuracao"} style={styles.link}><Ionicons name="settings" size={24} color="blue" />{"\n"}Configurações</Link>
       </View>
+      <View style={styles.message}>
+        <MessageComponent/>
+      </View>
       {/* <Light/> */}
     </View>
   );
@@ -26,7 +30,8 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
-    justifyContent: "center", 
+    padding: 10,
+    // justifyContent: "center", 
     alignItems: "center", 
     backgroundColor: "#f5f5f5", 
   },
@@ -40,6 +45,17 @@ const styles = StyleSheet.create({
   subTitle: {
     fontSize: 34,
     fontWeight: 100
+  },
+  message: {
+    flex: 1, 
+    justifyContent: "center", 
+    alignItems: "center", 
+  },
+  messageText: {
+    color: 'blue',
+    fontSize: 20,
+    fontWeight: 400,
+    fontFamily: 'Arial'
   },
   linkContainer: {
     flexDirection: "row", 

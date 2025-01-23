@@ -102,7 +102,7 @@ O botão de salvar dispara um console log com as configurações atuais.
 ```
 ## Uso de Ionicons
 Ao instalar o expo a biblioteca Ionicons já está configurada no projeto pronta para ser importada e usada.
-Pesquisar o icon que deseja usar : [text](https://icons.expo.fyi/Index)
+Pesquisar o icon que deseja usar : [icons expo](https://icons.expo.fyi/Index)
    1. importar no arquivo que deseja usar, nesse caso no index.ts
       ```bash
          import Ionicons from '@expo/vector-icons/Ionicons'; 
