@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
+
 import Header from '@/components/Header';
 import BrightnessControl from '@/components/BrightnessControl';
 import Configurations from '@/components/Configuration';
+
 
 const AmbienteBrilho = () => {
     const [brilho, setBrilho] = useState(50);
@@ -20,14 +22,18 @@ const AmbienteBrilho = () => {
     return (
         <View style={styles.container}>
             <Header />
-                <BrightnessControl brilho={brilho} setBrilho={setBrilho} />
-                <Configurations
-                    notificacoes={notificacoes}
-                    setNotificacoes={setNotificacoes}
-                    brilhoAutomatico={brilhoAutomatico}
-                    setBrilhoAutomatico={setBrilhoAutomatico}
-                    salvarConfiguracoes={salvarConfiguracoes}
-                />
+            <BrightnessControl brilho={brilho} setBrilho={setBrilho} />
+            <Text style={[styles.brilhoText, { color: brilho > 50 ? 'orange' : 'blue' }]}>
+                {brilho}%
+            </Text>
+            <Configurations
+                notificacoes={notificacoes}
+                setNotificacoes={setNotificacoes}
+                brilhoAutomatico={brilhoAutomatico}
+                setBrilhoAutomatico={setBrilhoAutomatico}
+                salvarConfiguracoes={salvarConfiguracoes}
+            />
+           
         </View>
     );
 };
@@ -41,6 +47,13 @@ const styles = StyleSheet.create({
         paddingTop: 5,
         backgroundColor: '#000',
         justifyContent: 'center',
+    },
+    brilhoText: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#ff8c00', 
+        textAlign: 'center',
+        marginTop: 10,
     },
 });
 

@@ -1,6 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, Switch, Button } from 'react-native';
-
+import { StyleSheet, Text, View, Switch, Button, Alert } from 'react-native';
+// import * as Brightness from 'expo-brightness';
+// import Slider from '@react-native-community/slider'; 
+  
 interface ConfigurationsProps {
     notificacoes: boolean;
     setNotificacoes: (value: boolean) => void;
@@ -16,13 +18,14 @@ const Configurations: React.FC<ConfigurationsProps> = ({
     setBrilhoAutomatico,
     salvarConfiguracoes,
 }) => {
+    
     return (
         <View style={styles.configContainer}>
+
             <Text style={styles.configLabel}>Notificações de Luminosidade</Text>
             <Switch
                 value={notificacoes}
                 onValueChange={(value) => setNotificacoes(value)}
-                // style={styles.switch}
             />
 
             <Text style={styles.configLabel}>Brilho Automático</Text>
@@ -43,16 +46,13 @@ const Configurations: React.FC<ConfigurationsProps> = ({
 const styles = StyleSheet.create({
     configContainer: {
         marginVertical: 20,
-        
+
     },
     configLabel: {
         fontSize: 16,
         marginBottom: 10,
         color: '#fff',
     },
-    // switch:{
-    //     backgroundColor: 'red'
-    // }
 });
 
 export default Configurations;

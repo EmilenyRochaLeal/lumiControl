@@ -44,7 +44,7 @@ export default function MessageComponent() {
   }, [subscription]);
 
   useEffect(() => {
-    LightSensor.setUpdateInterval(3000);
+    LightSensorgit.setUpdateInterval(3000);
   }, []);
 
   return (
